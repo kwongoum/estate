@@ -1,0 +1,14 @@
+<odoo>
+ <data>
+    <menuitem id="estate_menu_root" name="Estate ApplicationMenuItemm">
+        <menuitem 
+            id="estate_master_data_menu" 
+            name="Master DataIn"
+            action="estate.estate_property_action" />
+      
+        
+    </menuitem>
+
+ 
+</data>
+</odoo>
