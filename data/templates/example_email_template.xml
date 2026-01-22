@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+ <data noupdate="0">
+    <record id="simple_example_email_template" model="mail.template">
+        <field name="name">Example Email Template</field>
+        <field name="model_id" ref="estate.model_estate_property"/>
+        <field name="subject">${object.name} - Example</field>
+
+        <field name="body_html" type="html">
+            <![CDATA[
+            <table border="1" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th>Name</th>
+                    <th>Postal Code</th>
+                    <th>Date Availability</th>
+                </tr>
+                <tr>
+                    <td>${object.name}</td>
+                    <td>${object.postcode}</td>
+                    <td>${object.date_availability}</td>
+                </tr>
+            </table>
+            ]]>
+        </field>
+    </record>
+</data>
+</odoo>

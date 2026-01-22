@@ -7,6 +7,19 @@
             <field name="model">estate.property</field>
             <field name="arch" type="xml">
                 <form string="Estate Property Form">
+					<header>
+						<button name ="action_sold" type="object" string="Sold"
+						 invisible="state=='canceled' or state=='sold' or state=='offer_accepted'"/>
+
+						
+						<button name ="action_cancel" type="object" string="Cancel"
+						 invisible="state=='canceled' or state=='sold' or state=='offer_accepted'"/>
+						
+						<!-- <button name="action_send_email" type="object" string="Send Email" /> -->
+
+						<field name ="state" widget="statusbar" statusbar_visible="new,offer_received,offer_accepted,sold"/> 
+					</header>
+
                     <sheet>
                     <group>
                          <group>
@@ -30,29 +43,79 @@
 									
 	                        <notebook>
 				                <page string="Description">
+								<group>
 				                    <field name="description"/>
 				                    <field name="garden_orientation"/>
+								</group>
 				                </page>
+								<page string="Total area">
+								<group>
+									<field name="total_area"/>
+									<field name="state" />
+								</group>	
+								</page>
+								<page string="PIC and customer">
+								<group>
+									<field name="user_id"/>
+									<field name="buyer_id" default="defautBuyer" />
+								</group>	
+								</page>
 				            </notebook>
                         </group>
                     </sheet>
                 </form>
             </field>
         </record>
+		
+		<!-- =======  search view ==== -->
+<record id="estate_property_view_search" model="ir.ui.view">
+    <field name="name">estate.property.search</field>
+    <field name="model">estate.property</field>
+    <field name="arch" type="xml">
+        <search>
+            <field name="name"/>
+            <field name="postcode"/>
+            
 
+            <filter name="filter_garden"
+                    string="Withhh Garden"
+                    domain="[('garden','=',True)]"/>
+
+			<filter name="filter_without_garden" 
+					string="without garden"
+					domain="[('garden','=',False)]"
+				/>
+
+			<filter name="small_area_or_price"
+
+					string="small or cheap"
+					domain="['|',('living_area','&lt;',50), ('expected_price','&lt;',800000)]"	
+			/>	
+			<filter name="Postal_code_is_set"
+					string="Postal code Settedd"
+					domain="[('postcode','!=','False'), ('postcode','!=','')]"
+			
+			/> 
+
+        </search>
+    </field>
+</record>
+
+		<!-- ========end search view ==== -->
+
+		<!--  =========== view list ======= -->
 		<record id="estate_property_view_tree" model="ir.ui.view">
 			<field name="name"> Estate property List </field>
 			<field name="model">estate.property</field>
 			<field name="arch" type="xml"> 
 				<tree>
 			   		<field name="name"/>
-			   		<field name ="postcode"/>
-			   		<field name ="date_availability"/>
+			   		<field name="postcode"/>
+			   		<field name="date_availability"/>
+					<field name="state" />
 				</tree>
 			</field>
 		</record>
-
-	
 
 	</data>
 </odoo>
