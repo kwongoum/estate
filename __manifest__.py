@@ -12,11 +12,17 @@
         'security/ir.model.access.csv',
         'data/res_partner_data.xml',
         'views/estate_property.xml',
+        'views/estate_property_offer.xml',
+        'views/estate_property_type.xml',
+        'views/estate_property_tag.xml',
         'views/estate_property_actions.xml',
+        'views/estate_property_type_actions.xml',
+        'views/estate_property_offer_actions.xml',
+        'views/estate_property_tag_actions.xml',
         'views/menu.xml',
         'data/estate.property.csv',
         'views/schedulers/estate_property_scheduler.xml',
-      #   'data/templates/example_email_template.xml'
+      #  'data/templates/example_email_template.xml'
        
      ]
 

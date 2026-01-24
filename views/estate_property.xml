@@ -1,7 +1,21 @@
 <odoo>
 	<data>
+	<!--  =========== view list ======= -->
+		<record id="estate_property_view_tree" model="ir.ui.view">
+			<field name="name"> Estate property List </field>
+			<field name="model">estate.property</field>
+			<field name="arch" type="xml"> 
+				<tree string="properties List">
+					<field name="property_type_id" />
+			   		<field name="name"/>
+			   		<field name="postcode"/>
+			   		<field name="date_availability"/>
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
 
-          <!-- Define the form view for estate.property -->
+          <!--   FORM  view for estate.property -->
         <record id="estate_property_view_form" model="ir.ui.view">
             <field name="name">estate property form</field>
             <field name="model">estate.property</field>
@@ -23,6 +37,8 @@
                     <sheet>
                     <group>
                          <group>
+						 		<field name="property_tag_ids"  widget="many2many_tags" options="{'color_field':'color'}"/>
+						 		<field name="property_type_id"  options="{'no_create':True, 'no_edit':True}"/>
 				                <field name="name"/>
 				                <field name="postcode"/>
 				                <field name="date_availability"/>
@@ -58,6 +74,12 @@
 								<group>
 									<field name="user_id"/>
 									<field name="buyer_id" default="defautBuyer" />
+								</group>	
+								</page>
+								<page string="Offers">
+								<group>
+									<field name="property_offer_ids"/>
+									
 								</group>	
 								</page>
 				            </notebook>
@@ -103,19 +125,7 @@
 
 		<!-- ========end search view ==== -->
 
-		<!--  =========== view list ======= -->
-		<record id="estate_property_view_tree" model="ir.ui.view">
-			<field name="name"> Estate property List </field>
-			<field name="model">estate.property</field>
-			<field name="arch" type="xml"> 
-				<tree>
-			   		<field name="name"/>
-			   		<field name="postcode"/>
-			   		<field name="date_availability"/>
-					<field name="state" />
-				</tree>
-			</field>
-		</record>
+		
 
 	</data>
 </odoo>

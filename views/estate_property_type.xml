@@ -1,0 +1,36 @@
+<odoo>
+	<data>
+	<!--  =========== view list ======= -->
+		<record id="estate_property_type_view_tree" model="ir.ui.view">
+			<field name="name"> Estate property Type List </field>
+			<field name="model">estate.property.type</field>
+			<field name="arch" type="xml"> 
+				<tree>
+                 
+			   		<field name="name"/>
+			   		<field name="description"/>
+			   		
+				</tree>
+			</field>
+		</record>
+
+          <!-- Define the FORM  view for estate.property -->
+        <record id="estate_property_type_view_form" model="ir.ui.view">
+            <field name="name">estate property type form</field>
+            <field name="model">estate.property.type</field>
+            <field name="arch" type="xml">
+                <form string="Estate Property Type Form">
+                   <sheet>
+                    <group>
+
+				                <field name="name" />
+				                <field name="description" />
+				               				            
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+	
+	</data>
+</odoo>

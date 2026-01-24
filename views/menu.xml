@@ -1,10 +1,27 @@
 <odoo>
  <data>
-    <menuitem id="estate_menu_root" name="Estate ApplicationMenuItemm" sequence="0">
+    <menuitem id="estate_menu_root" name="Estate ApplicationMenuItemm" sequence="10">
         <menuitem 
-            id="estate_master_data_menu" 
-            name="Master DataIn"
+            id="estate_property_master_data_menu" 
+            name="Master Data/ Properties"
             action="estate.estate_property_action" />
+
+     <menuitem 
+            id="estate_property_type_master_data_menu" 
+            name="Master Data/Type"
+            action="estate.estate_property_type_action" />
+
+    <menuitem 
+            id="estate_property_offer_master_data_menu" 
+            name="Master Data/offer"
+            action="estate.estate_property_offer_action" />
+
+    <menuitem 
+            id="estate_property_tag_master_data_menu" 
+            name="Master Data/Tag"
+            action="estate.estate_property_tag_action" />
+
     </menuitem>
 </data>
 </odoo>
+
