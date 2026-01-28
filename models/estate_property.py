@@ -51,6 +51,10 @@ class EstateProperty(models.Model):
 						   compute ='_compute_total_area',
 						   store=True
 						   )
+    @api.depends("living_area","garden_area")	
+	def _compute_total_area(self):
+		for prop in self: 
+			prop.total_area=(prop.living_area or 0)+(prop.garden_area or 0)
 
 	_sql_constraints = [
 		(
@@ -78,10 +82,7 @@ class EstateProperty(models.Model):
 				raise ValidationError("Selling price cannot be inferior to expected price")
 			
 
-	@api.depends("living_area","garden_area")	
-	def _compute_total_area(self):
-		for prop in self: 
-			prop.total_area=(prop.living_area or 0)+(prop.garden_area or 0)
+	
 
 	""" @api.onchange("garden")
 	def _onchange_garden(self):
