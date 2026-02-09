@@ -1,8 +1,8 @@
 from odoo import fields, models
 
 class EstatePropertyTag(models.Model):
-    _name = "estate.property.tag"
-    _description = "Real Estate Property Tags"
+    _name = "estate.property.tag" 
+    _description = "Real Estate Property Tag"
     
     _sql_constraints = [
         ("check_price", "CHECK(price > 0)", "The price must be strictly positive"),
@@ -12,3 +12,5 @@ class EstatePropertyTag(models.Model):
     color = fields.Integer(default=4)
 
     # estate_property_ids =  fields.Many2many("estate.property")
+
+    

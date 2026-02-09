@@ -20,9 +20,11 @@
         'views/estate_property_offer_actions.xml',
         'views/estate_property_tag_actions.xml',
         'views/menu.xml',
+        'views/reports/output_pdf/estate_property_report.xml',
         'data/estate.property.csv',
         'views/schedulers/estate_property_scheduler.xml',
       #  'data/templates/example_email_template.xml'
+      
        
      ]
 

@@ -1,7 +1,8 @@
 <odoo>
 	<data>
 	<!--  =========== view list ======= -->
-		<record id="estate_property_offer_view_tree" model="ir.ui.view">
+		<record id="estate_property_tag_view_tree" model="ir.ui.view">
+					
 			<field name="name"> Estate property Tag List </field>
 			<field name="model">estate.property.tag</field>
 			<field name="arch" type="xml"> 
