@@ -24,6 +24,8 @@
         'data/estate.property.csv',
         'views/schedulers/estate_property_scheduler.xml',
       #  'data/templates/example_email_template.xml'
+      #  'data/res.groups.csv',
+      #  'data/ir.model.access.csv'
       
        
      ]
