@@ -1,3 +1,5 @@
+import json
+import requests
 from odoo import http
 
 class EstateProperty(http.Controller):
@@ -22,3 +24,8 @@ class EstateProperty(http.Controller):
                 'email': user.login
             })
         return result
+    
+    @http.route('/entries', auth='public')
+    def entries(self, **kw):
+        response = requests.get("https://collectionapi.metmuseum.org/public/collection/v1/objects/100")
+        return json.dumps(response.json())

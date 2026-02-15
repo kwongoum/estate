@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Estate',
-    'version': '1.0',
+    'version': '17.0.1.0.0',
     'category': 'App',
     'summary': 'Manage properties and estates',
     'description': 'Module for managing estates, properties, and customer relations.',
@@ -27,6 +27,8 @@
       #  'data/res.groups.csv',
       #  'data/ir.model.access.csv'
       
+      # demo data 
+        'demo/estate_property_tag.xml'
        
      ]
 
