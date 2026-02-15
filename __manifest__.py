@@ -27,7 +27,7 @@
       #  'data/res.groups.csv',
       #  'data/ir.model.access.csv'
       
-      # demo data 
+      # demo data : initial data
         'demo/estate_property_tag.xml'
        
      ]
