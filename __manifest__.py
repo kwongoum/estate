@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Estate-BE',
+    'name': 'Estate',
     'version': '17.0.1.0.0',
     'category': 'App',
-    'summary': 'Manage properties and estates',
+    'summary': 'Managing properties and estates',
     'description': 'Module for managing estates, properties, and customer relations.',
     'author': 'Avit Wongoum K.',
     'depends': ['base','mail'],
@@ -23,6 +23,7 @@
         'views/reports/output_pdf/estate_property_report.xml',
         'data/estate.property.csv',
         'views/schedulers/estate_property_scheduler.xml',
+        'views/users.xml',
       #  'data/templates/example_email_template.xml'
       #  'data/res.groups.csv',
       #  'data/ir.model.access.csv'

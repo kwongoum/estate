@@ -6,22 +6,29 @@
             name="Master Data/ Properties"
             action="estate.estate_property_action" />
 
-     <menuitem 
+        <menuitem 
             id="estate_property_type_master_data_menu" 
             name="Master Data/Type"
             action="estate.estate_property_type_action" />
 
-    <menuitem 
+         <menuitem 
             id="estate_property_offer_master_data_menu" 
             name="Master Data/offer"
             action="estate.estate_property_offer_action" />
 
-    <menuitem 
+        <menuitem 
             id="estate_property_tag_master_data_menu" 
             name="Master Data/Tag"
             action="estate.estate_property_tag_action" />
 
-    </menuitem>
+    </menuitem>        
+
+     <menuitem 
+            id="api_user_token_menu_action" 
+            name="API Configurations"
+            action="users_token_action" />  
+              
+    
 </data>
 </odoo>
 
