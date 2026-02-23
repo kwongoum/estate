@@ -1,0 +1,17 @@
+
+.git
+
+# ===========
+# Python
+__pycache__/
+*.pyc
+
+# Odoo
+*.log
+*.sqlite3
+.odoo/
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
