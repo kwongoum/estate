@@ -1,1 +1,2 @@
 from . import test_estate_property_tag, test_estate_property_tag_api
+from . import estate_property_tag_test

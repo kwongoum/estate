@@ -23,10 +23,11 @@
         "views/reports/output_pdf/estate_property_report.xml",
         "data/estate.property.csv",
         "views/schedulers/estate_property_scheduler.xml",
+        "views/users.xml",
         #  'data/templates/example_email_template.xml'
         #  'data/res.groups.csv',
         #  'data/ir.model.access.csv'
-        # demo data : initial data
-        # "demo/estate_property_tag.xml",
+        # demo data
+        "demo/estate_property_tag.xml",
     ],
 }
