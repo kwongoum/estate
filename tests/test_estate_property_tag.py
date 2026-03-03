@@ -1,7 +1,9 @@
 from odoo.tests import TransactionCase
 from odoo.exceptions import ValidationError
+from odoo.tests import tagged
 
 
+@tagged("estate")
 class TestEstatePropertyTag(TransactionCase):
 
     def setUp(self):

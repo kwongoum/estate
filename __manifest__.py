@@ -19,7 +19,6 @@
         "views/estate_property_type_actions.xml",
         "views/estate_property_offer_actions.xml",
         "views/estate_property_tag_actions.xml",
-        "views/menu.xml",
         "views/reports/output_pdf/estate_property_report.xml",
         "data/estate.property.csv",
         "views/schedulers/estate_property_scheduler.xml",
@@ -29,5 +28,6 @@
         #  'data/ir.model.access.csv'
         # demo data
         "demo/estate_property_tag.xml",
+        "views/menu.xml",
     ],
 }

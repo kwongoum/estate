@@ -7,6 +7,9 @@ def authenticate(func):
 
     @wraps(func)
     def wrapper(*args, **kwargs):
+        # Si session Odoo active → OK
+        if request.session.uid:
+            return func(*args, **kwargs)
         try:
             token = request.httprequest.headers.get("Authorization")
             if not token:

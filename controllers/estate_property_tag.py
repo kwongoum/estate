@@ -8,7 +8,13 @@ from ..utils.auth_utils import authenticate
 
 class EstatePropertyTagController(http.Controller):
 
-    @http.route("/estate-property-tags", auth="public", methods=["GET"])
+    @http.route(
+        "/estate-property-tags",
+        type="http",
+        auth="public",
+        methods=["GET"],
+        csrf="false",
+    )
     @authenticate
     def get_property_tags(self, **kwargs):
         tags = request.env["estate.property.tag"].search([])
@@ -85,6 +91,10 @@ class EstatePropertyTagController(http.Controller):
 
         response_data = {
             "id": tag_id,
-            "message": f"Tag with id #{tag_id} has been deleted.",
+            "message": f"Tag with id n° {tag_id} has been deleted.",
         }
         return Response(json.dumps(response_data), content_type="application/json")
+
+    @http.route("/test-route", type="http", methods=["GET"], auth="public")
+    def test(self):
+        return "OK"
